@@ -416,11 +416,11 @@ h1 {
 
 .callout {
   border-radius: 30px;
-  padding: 28px 30px;
+  padding: 34px;
   display: grid;
-  grid-template-columns: minmax(0, 1fr) auto;
-  align-items: center;
-  gap: 20px;
+  grid-template-columns: minmax(0, 1.15fr) minmax(280px, 0.85fr);
+  align-items: start;
+  gap: 28px;
   background: linear-gradient(135deg, rgba(23, 32, 51, 0.95), rgba(50, 65, 94, 0.9));
   color: white;
 }
@@ -429,9 +429,33 @@ h1 {
   color: #e9d6be;
 }
 
+.callout-copy {
+  max-width: 560px;
+}
+
+.callout-copy h2 {
+  margin-bottom: 14px;
+  font-size: clamp(1.9rem, 3vw, 3rem);
+  line-height: 1.05;
+}
+
+.callout-copy p:not(.eyebrow) {
+  max-width: 46ch;
+}
+
 .callout p:not(.eyebrow) {
   color: rgba(255, 255, 255, 0.82);
   line-height: 1.7;
+}
+
+.callout-actions {
+  display: grid;
+  gap: 12px;
+  align-content: start;
+}
+
+.button-block {
+  width: 100%;
 }
 
 .callout .button-secondary {
@@ -500,6 +524,10 @@ h1 {
   .callout {
     grid-template-columns: 1fr;
   }
+
+  .callout {
+    gap: 18px;
+  }
 }
 
 @media (max-width: 640px) {
@@ -529,5 +557,9 @@ h1 {
 
   .image-copy {
     transform: none;
+  }
+
+  .callout-copy h2 {
+    font-size: 1.8rem;
   }
 }
