@@ -226,7 +226,7 @@ h1 {
 
 .feature-band {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: 1.05fr 0.95fr 1fr;
   gap: 18px;
 }
 
@@ -275,12 +275,20 @@ h1 {
   background: url("Visiter-lOccitanie-10-incontournables-a-faire-et-voir.jpeg") center/cover no-repeat;
 }
 
-.shot-pyrenees {
-  background: url("ariege.jpg") center/cover no-repeat;
+.feature-shot--text {
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.82), rgba(240, 230, 216, 0.7));
+}
+
+.feature-shot__content--light {
+  color: var(--text);
+}
+
+.feature-shot__content--light p:not(.eyebrow) {
+  color: var(--muted);
 }
 
 .shot-heritage {
-  background: url("images.jpeg") center/cover no-repeat;
+  background: url("ariege.jpg") center/cover no-repeat;
 }
 
 .section-heading {
@@ -337,7 +345,7 @@ h1 {
 }
 
 .news-list {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: 1.05fr 0.95fr 1fr;
 }
 
 .news-card--image {
@@ -358,15 +366,17 @@ h1 {
 }
 
 .news-card--industrial {
-  background: url("industry.jpg") center/cover no-repeat;
+  background: linear-gradient(180deg, rgba(255,255,255,0.92), rgba(243, 236, 224, 0.84));
 }
 
-.news-card--city {
-  background: url("images.jpeg") center/cover no-repeat;
+.news-card--text {
+  background: linear-gradient(180deg, rgba(255,255,255,0.92), rgba(243, 236, 224, 0.84));
 }
 
-.news-card--landscape {
-  background: url("ariege.jpg") center/cover no-repeat;
+.news-card--accent {
+  background:
+    linear-gradient(180deg, rgba(15, 23, 42, 0.75), rgba(15, 23, 42, 0.88)),
+    url("usine occitanie image.jpg") center/cover no-repeat;
 }
 
 .news-date {
@@ -387,31 +397,6 @@ h1 {
 
 .benefits-grid--split {
   align-items: stretch;
-}
-
-.benefit-card--image {
-  position: relative;
-  min-height: 320px;
-  overflow: hidden;
-  color: white;
-  display: flex;
-  align-items: flex-end;
-}
-
-.benefit-card--panorama {
-  background: url("images.jpeg") center/cover no-repeat;
-}
-
-.benefit-card--heritage {
-  background: url("Visiter-lOccitanie-10-incontournables-a-faire-et-voir.jpeg") center/cover no-repeat;
-}
-
-.benefit-card__content {
-  padding: 24px;
-}
-
-.benefit-card--image .eyebrow {
-  color: #f2d9bc;
 }
 
 .callout {
@@ -507,8 +492,7 @@ h1 {
 }
 
 .image-panel::after,
-.news-card--image::after,
-.benefit-card--image::after {
+.news-card--image::after {
   content: "";
   position: absolute;
   inset: 0;
